@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
 
     private Rigidbody2D rigidBody2D; //rigidbody2d raket ini 
 
-    private ContactPoint2D lastContactPoint; //Titik tumbukan terakhir dengan bole, untuk menampilkan variabel2 fisika terkait tumbukan tersebut
+    private ContactPoint2D lastContactPoint; //Titik tumbukan terakhir dengan bola, untuk menampilkan variabel2 fisika terkait tumbukan tersebut
 
     private int score;
     // Start is called before the first frame update
@@ -47,8 +47,7 @@ public class PlayerControl : MonoBehaviour
         {
             position.y = yBoundary; //kembalikan ke batas atas tersebut
         }
-
-        if(position.y < -yBoundary) //jika posisi raket melewati batas bawah 
+        else if(position.y < -yBoundary) //jika posisi raket melewati batas bawah 
         {
             position.y = -yBoundary; //kembalikan ke batas atas tersebut
         }
